@@ -1,0 +1,535 @@
+/*----------Allmänna inställningar----------*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* Scrollar ned till relativa länkar med en animerande effekt, vid klick (navigationslänkarna) */
+}
+
+body {
+    font-family:Arial, Helvetica, 'Poppins', sans-serif; /*Använder Arial främst eftersom att synskadade uppfattar det bättre*/
+    width: 100%; 
+    background: #000000;
+}
+
+
+/*----------Navbaren och navigationsmenyn----------*/
+.socialMedia {
+  width: 3rem;
+  height: 3rem;
+  margin: 2rem;
+  margin-top: 0.8rem;
+
+  font-size: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  z-index: 2000000;
+
+  transform: rotate(90deg) translateY(-10vw);
+  transition: transform 1s ease-in-out;
+}
+
+.socialMedia a {
+  color: #ff0400a3;
+}
+
+
+nav {
+  width: 100%;
+  max-width: 50%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -500vw;
+  z-index: 2999;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), transparent);
+
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+  transition: left 0.8s ease-in-out;
+}
+
+/* Textstilering i navigationsfönstret */
+nav ul li {
+  text-transform: uppercase;
+  list-style: none;
+  text-shadow: 2px 2px 20px #fffa;
+  line-height: 40px;
+
+}
+
+nav ul li a {
+  color: #FFFa;
+  text-decoration: none;
+  letter-spacing: 3px;
+  transition: all ease 0.4s;
+  opacity: 0.9;
+
+  padding: 5% 50%;
+
+
+}
+
+nav ul li a:hover {
+  opacity: 1;
+  color: #FFF;
+  background: rgba(249, 0, 0, 0.132);
+
+}
+
+/*Hamburgarmeny ikonen som klickas på för att öppna navigationsmenyn */
+#hamburger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateX(-6rem);
+  width: 2rem;
+  height: 2rem;
+  z-index: 2000;
+  cursor: pointer;
+  margin: 10px;
+  transition: all 0.8s; /* animerar tillsammans med javascript*/
+}
+
+/*Pilen i navigationsfönstret */
+.leftArrow {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 10px;
+  opacity: 0.9;
+  cursor: pointer;
+  transition: all ease-in-out 0.5s;
+}
+
+.leftArrow:hover {
+  opacity: 1;
+}
+
+
+
+/*----------Home----------*/
+#home {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+}
+
+/* Startsidans bakgrundsinställningar*/
+.background {
+  width: 100%;
+  height: 100vh;
+}
+
+#background {
+  width: 100%;
+  height: 100vh;
+
+  background: linear-gradient(transparent, rgba(0, 0, 0, 1)), url(../assets/background1.jpg);
+  background-size: cover;
+  background-position: center;
+
+  /*Animationer*/
+  opacity: 0; 
+  transition: transform 5s ease, opacity 3s ease;  
+}
+
+
+/* Titeln i startsidan */
+.title {
+  color: #FFFFFF;
+  text-shadow: 2px 2px 20px #fffa;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  position: relative;
+  font-size: 25px;
+}
+
+/* Titel animationen vid inladdning av sidan */
+#title {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: transform ease-in-out 2s, opacity ease-in-out 2s;
+}
+
+
+
+/*---------- About Sektionen----------*/
+/* Bakgrunden till About sektionen */
+.about {
+  background: #000000;
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+}
+
+/* Textstilen i aboutsektionen*/
+.about h1 {
+  color: #FFFFFF;
+  line-height: 40px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Röd färg på vissa span element*/
+.red {
+  color: #ff0400cc;
+}
+
+
+/* Stilen på brödtexten */
+.about p{
+  color: #FFFFFF;
+  max-width: 60%;
+  margin-top: 10px;
+  line-height: 30px;
+  opacity: 0.8;
+}
+
+#about {
+  width: 100%;
+  max-width: 100vw;
+
+  overflow: hidden;
+}
+
+#aboutTitle{
+  opacity: 0;
+  transform: translateY(-200px);
+  transition: transform ease-in-out 2s, opacity ease-in-out 3s;
+}
+
+
+#aboutTextOne {
+  opacity: 0;
+  transform: translateX(50vw);
+  transition: transform ease-in-out 2s, opacity ease-in-out 3s;
+}
+
+#aboutTextTwo {
+  opacity: 0;
+  transform: translateX(-50vw);
+  transition: transform ease-in-out 2s, opacity ease-in-out 3s;
+}
+
+
+/*----------Contact sektionen ----------*/
+.backgroundContact{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  background: linear-gradient(rgba(0,0,0,1), transparent), url(../assets/background3.jpg);
+  background-size: cover;
+  background-position: center;
+
+  transition: transform 5s ease;
+}
+
+
+
+/* Titeln i Contact sektionen*/
+.contactTitle {
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  color: #FFFFFF;
+  text-shadow: 2px 2px 20px #fffa;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  margin-top: 600px;
+  margin-bottom: 0px;
+}
+
+#contactTitle {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: transform ease-in-out 2s, opacity ease-in-out 2s;
+
+}
+
+/*kontakt knappen*/
+.contactForm{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.button-container {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  margin: 0;
+  margin-bottom: 500px;
+
+}
+.button {
+  width: 100px;
+  height: 40px;
+  z-index: 100000000;
+  position: inherit;
+  border-radius: 110px;
+  color: #FFFFFF;
+  background: transparent;
+  margin-top: 100px;
+
+  cursor: pointer;
+
+  transition: all 0.5s ease-in-out;
+
+  text-transform: uppercase;
+}
+
+.button:hover {
+  background: #FFFFFF;
+  color: #000000;
+
+}
+
+#contactClick {
+  opacity: 0;
+  transition: opacity ease 3s;
+}
+
+/*----------Footer sektionen----------*/
+#footer{
+  position: relative;
+  bottom: 0;
+
+  z-index: 2000000;
+
+  transform: translateY(-10vh);
+  background: transparent;
+  width: 100%;
+  height: 0px;
+  background: transparent;
+  display: grid;
+  align-items: center;
+  flex-direction: column;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+  "adress number"
+  "copyright copyright"
+  ;
+}
+
+#contactFormFooter {
+  margin-top: 5rem;
+  position: relative;
+  bottom: 0;
+}
+
+.adress {
+  grid-area: adress;
+}
+
+.number {
+  grid-area: number;
+}
+
+.copyright {
+  grid-area: copyright;
+  margin: 1rem 0;
+}
+
+footer p {
+  z-index: 1000;
+  color: #FFFFFF;
+  font-size: 12px;
+  text-align: center;
+}
+
+
+/*----------Formulären i kontaktsidan----------*/
+.form {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  
+}
+/*Textfältens storlekar och form*/
+.form input {
+  width: 80vw;
+  height: 30px;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+/*Titeln ovanför kontaktformuläret*/
+.form h1 {
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 40px;
+
+  text-transform: uppercase;
+}
+
+/*Namnen över textfälten*/
+.form label {
+  color: #FFFFFF;
+  line-height: 30px;
+}
+
+/*Diven vars formulärets knappar existerar*/
+.formButtons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*Knapparna i formuläret*/
+.formButtons input {
+  width: 100px;
+  margin: 10px;
+  margin-top: 1rem;
+  height: 40px;
+}
+/*Meddelanderutan*/
+#message {
+  min-width: 80vw;
+  max-width: 80vw;
+  border-radius: 1rem;
+  margin-top: 0.2rem;
+  min-height: 20vh;
+  max-height: 20vh;
+}
+
+/*----------Responisivitet för större skärmar-----------*/
+@media only screen and (max-width:600px) {
+    .socialMedia {
+      margin-right: 1rem;
+    }
+  
+}
+
+@media only screen and (min-width:600px) {
+  .title {
+    font-size: 40px;
+  }
+  h1 {
+    font-size: 40px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+  #about br {
+    margin-bottom: 20px;
+  }
+  nav ul li {
+    font-size: 25px;
+    margin: 2rem;
+  }
+  
+}
+
+@media only screen and (min-width:1020px) {
+  .title {
+    font-size: 70px;
+  }
+  h1 {
+    font-size: 70px;
+  }
+  .about{
+    height: 150vh;
+  } 
+
+  .about p {
+    font-size: 30px;
+    line-height: 45px;
+    margin-top: 40px;
+    width: 500px ;
+
+  }
+  #about h1 {
+    line-height: 70px;
+  }
+  #socialMedia {
+    width: 4rem;
+  }
+  #socialMedia a {
+    font-size: 30px;
+  }
+
+  #hamburger {
+    width: 3rem;
+    height: 3rem;
+    margin-left: 1rem;
+  }
+  .leftArrow {
+    width: 3rem;
+    height: 3rem;
+  }
+  nav ul li {
+    font-size: 30px;
+    margin: 3rem;
+  }
+}
+
+
+/*------Stänga av skrolleffekterna vid liggande orientation------*/
+@media screen and (min-width: 300px) and (max-width:1024px) and (orientation: landscape) {
+  #contactClick, #contactTitle {
+    opacity: 1;
+    transform: translateY(-50px);
+  }
+  
+  #about {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  #form {
+    height: 200vh;
+    position: relative;
+  }
+  #footer{
+    position: relative;
+    bottom: 10vh;
+  }
+
+  #contactFormTitle{
+    margin-top: 1rem;
+  }
+
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/styles.css" />
+    <title>Discover Iceland - Contact Us</title>
+  </head>
+  <body>
+    <header>
+      <img
+        class="hamburger"
+        id="hamburger"
+        src="./assets/hamburger-menu.svg"
+        alt="hamburger-menu"
+      />
+
+      <nav id="nav" class="nav">
+        <img
+          class="leftArrow"
+          id="left__arrow"
+          src="./assets/left.svg"
+          alt=""
+        />
+        <ul>
+          <li><a id="homeButton" class="item" href="./#home">Home</a></li>
+          <li><a id="aboutButton" class="item" href="./#about">About</a></li>
+          <li
+            ><a id="contactButton" class="item" href="./#contact"
+              >Contact</a
+            ></li
+          >
+        </ul>
+      </nav>
+    </header>
+
+    <section id="form" class="form">
+      <h1 id="contactFormTitle">Contact Us</h1>
+      <form
+        ><label for="fname">First name:</label><br />
+        <input
+          type="text"
+          id="fname"
+          name="fname"
+          placeholder="    Roberto"
+        /><br />
+        <label for="lname">Last name:</label><br />
+        <input type="text" id="lname" name="lname" placeholder="    Amedi" />
+        <br />
+        <label for="email">Email:</label><br />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="   roam2200@miun.student.se"
+        />
+        <br />
+        <label for="tel">Number:</label><br />
+        <input
+          type="tel"
+          id="tel"
+          name="tel"
+          placeholder="    (+354) 517 8289"
+        />
+        <br />
+        <label for="message">Message:</label><br />
+        <textarea
+          id="message"
+          name="message"
+          placeholder="  Message..."
+        ></textarea>
+        <div class="formButtons">
+          <input
+            onclick="alertBox(), document.getElementById('message').value =''"
+            id="submit"
+            class="button"
+            type="submit"
+            value="Submit"
+          />
+          <input
+            onclick="document.getElementById('message').value =''"
+            id="clear"
+            class="button"
+            type="submit"
+            value="Clear"
+          />
+        </div>
+      </form>
+    </section>
+    <div id="contactFormFooter"
+      ><footer class="footer" id="footer">
+        <div class="adress"
+          ><p>Fiskislóð 77 </p>
+          <p>IS-101 Reykjavík </p>
+          <p>Iceland</p></div
+        >
+        <div class="number"
+          ><p>Office: (+354) 517 8289</p>
+          <p>Emergency: (+354) 662 2990</p>
+          <p>info@discover-iceland.com</p></div
+        >
+        <p class="copyright"
+          >Copyright ©, All rights reserved - Roberto Piran Amedi 2022
+        </p>
+      </footer></div
+    >
+
+    <script src="./JavaScript/main.js"></script>
+  </body>
+</html>
