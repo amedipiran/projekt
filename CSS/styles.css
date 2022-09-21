@@ -392,7 +392,21 @@ footer p {
   height: 30px;
   border-radius: 1rem;
   margin-bottom: 1rem;
+  background: #000000;
+  color: #FFFFFF;
+  padding-left:1rem ;
+  outline: none;
 }
+
+
+
+.form input:focus {
+  transform: scale(1.01);
+  border: 3px solid rgb(49, 143, 160);
+
+  transition: all 0.5s;
+}
+
 
 /*Titeln ovanför kontaktformuläret*/
 .form h1 {
@@ -432,6 +446,26 @@ footer p {
   margin-top: 0.2rem;
   min-height: 20vh;
   max-height: 20vh;
+
+  background: #000000;
+  color: #FFF;
+  padding: 0.5rem 1rem;
+  outline: none;
+}
+
+#message:focus{
+  transform: scale(1.01);
+  border: 3px solid rgb(49, 143, 160);
+
+  transition: all 0.5s;
+}
+
+/*Knapparna längst ned på sidan*/
+#submit {
+  padding: 0;
+}
+#clear {
+  padding: 0;
 }
 
 /*----------Responisivitet för större skärmar-----------*/
