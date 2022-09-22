@@ -226,12 +226,15 @@ nav ul li a:hover {
   opacity: 0;
   transform: translateX(50vw);
   transition: transform ease-in-out 2s, opacity ease-in-out 3s;
+  transition-delay: 0.2s;
+
 }
 
 #aboutTextTwo {
   opacity: 0;
   transform: translateX(-50vw);
   transition: transform ease-in-out 2s, opacity ease-in-out 3s;
+  transition-delay: 0.3s;
 }
 
 
@@ -323,7 +326,8 @@ nav ul li a:hover {
 
 #contactClick {
   opacity: 0;
-  transition: opacity ease 3s;
+  transition: opacity ease 3s, transform 0.5s ease-in-out;
+
 }
 
 /*----------Footer sektionen----------*/
