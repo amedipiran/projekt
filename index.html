@@ -5,18 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!---Länkar till CSS-filen-->
     <link rel="stylesheet" href="./CSS/styles.css" />
+
+    <!---importering av ikonen på webbplatsen, före titeln-->
     <link rel="icon" href="./assets/icon.png" />
     <title>Discover Iceland</title>
   </head>
   <body>
+    <!---Navigationsmenyn-->
     <header>
       <div class="socialMedia" id="socialMedia">
-        <a id="facebook" href="https://www.facebook.com" target="_blank"
-          ><i class="fa-brands fa-facebook-f"></i
+        <!---Jag får felmeddelande vid i-elementen i AC-checker, dock används de vid import av ikoner från fontawesome. I felmeddelandet står det att jag ska byta ut i-elementen mot em-element eller "strong"-->
+
+        <a
+          title="Visit our Facebook"
+          id="facebook"
+          href="https://www.facebook.com"
+          target="_blank"
+          ><em class="fa-brands fa-facebook-f"></em
         ></a>
-        <a id="instagram" href="https://www.instagram.com" target="_blank"
-          ><i class="fa-brands fa-instagram"></i
+        <a
+          title="Visit our Instagram"
+          id="instagram"
+          href="https://www.instagram.com"
+          target="_blank"
+          ><em class="fa-brands fa-instagram"></em
         ></a>
       </div>
       <img
@@ -45,15 +59,17 @@
       </nav>
     </header>
 
+    <!---Bakgrundsbilden samt headern till "home"-sidan-->
     <section id="home" class="background">
       <div id="background">
         <h1 class="title"><span id="title">Discover Iceland</span></h1>
       </div>
     </section>
 
+    <!---About-sektionen--->
     <section id="about" class="about">
-      <h1 id="aboutTitle"
-        >The land of <br /><span id="red" class="red">fire</span> and ice</h1
+      <h2 id="aboutTitle"
+        >The land of <br /><span id="red" class="red">fire</span> and ice</h2
       >
       <p id="aboutTextOne"
         >Iceland is a country of extreme contrasts and dramatic landscapes.
@@ -69,10 +85,11 @@
       </p>
     </section>
 
+    <!--Kontakt-sektionen-->
     <section id="contact">
       <div class="contactForm">
-        <h1 id="contactTitle" class="contactTitle"
-          >Contact Us<br />For Booking</h1
+        <h2 id="contactTitle" class="contactTitle"
+          >Contact Us<br />For Booking</h2
         >
 
         <form class="button-container" action="contact.html">
@@ -84,10 +101,9 @@
           />
         </form>
       </div>
-
-      <div id="backgroundContact" class="backgroundContact"> </div>
     </section>
 
+    <!--Footer-sektionen-->
     <footer class="footer" id="footer">
       <div class="adress"
         ><p>Fiskislóð 77 </p>

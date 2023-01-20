@@ -4,13 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!---Länkar till CSS-filen-->
     <link rel="stylesheet" href="./CSS/styles.css" />
+    <!---importering av ikonen på webbplatsen, före titeln-->
     <link rel="icon" href="./assets/icon.png" />
 
+    <!---Titeln-->
     <title>Discover Iceland - Contact Us</title>
   </head>
   <body>
-    <header>
+    <!---Navigationsmenyn-->
+    <header class="contactFormHeader">
       <img
         class="hamburger"
         id="hamburger"
@@ -35,8 +40,12 @@
           >
         </ul>
       </nav>
+      <a title="Close Page" href="./#home" id="x-mark"
+        ><em class="fa-solid fa-x"></em
+      ></a>
     </header>
 
+    <!---Kontaktformuläret-->
     <section id="form" class="form">
       <h1 id="contactFormTitle">Contact Us</h1>
       <form
@@ -85,6 +94,8 @@
         </div>
       </form>
     </section>
+
+    <!---Footer-sektionen-->
     <div id="contactFormFooter"
       ><footer class="footer" id="footer">
         <div class="adress"
@@ -104,5 +115,9 @@
     >
 
     <script src="./JavaScript/main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/2595ac3557.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
